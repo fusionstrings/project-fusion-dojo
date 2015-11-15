@@ -1,0 +1,35 @@
+{
+  "name": "project-fusion-dojo",
+  "description": "In pursuit of better boilerplate of Dojo Toolkit based applications",
+  "main": "index.js",
+  "authors": [
+    "Dilip Kr. Shukla"
+  ],
+  "license": "MPL-2.0",
+  "keywords": [
+    "Dojo"
+  ],
+  "homepage": "https://github.com/fusionstrings/project-fusion-dojo",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "dojo": "dojo/dojo#~1.10.4",
+    "dijit": "dojo/dijit#~1.10.4",
+    "dojox": "dojo/dojox#~1.10.4",
+    "util": "dojo/util#~1.10.4",
+    "dgrid": "~0.4.0",
+    "xstyle": "~0.3.1",
+    "riot": "~2.3.1",
+    "react": "~0.14.2",
+    "dmodel": "~0.1.0",
+    "dstore": "1.x",
+    "fetch": "~0.10.1",
+    "es6-promise": "~3.0.2"
+  }
+}

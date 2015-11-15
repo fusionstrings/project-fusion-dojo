@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Tutorial: Hello Dojo!</title>
+</head>
+<body>
+    <h1 id="greeting">Hello ok...</h1>
+    <h2 id="o">Dojo</h2>
+    <div id="example"></div>
+    <div id="tic"></div>
+    <script>
+        var dojoConfig = {
+            async: true,
+            baseUrl: '/',
+            packages: [                
+                //{ name: "dojo17", location: "//ajax.googleapis.com/ajax/libs/dojo/1.7.0" },
+                { name: "dojo", location: "bower_components/dojo" },
+                { name: "dstore", location: "bower_components/dstore" },
+                { name: "dmodel", location: "bower_components/dmodel" },
+                { name: "fuse-portlet", location: "amd/fuse-portlet"}
+            ]
+        };
+    </script>
+    <!-- load Dojo -->
+    <script src="bower_components/dojo/dojo.js" data-dojo-config="async: true"></script>
+            
+    <script>
+        require(["fuse-portlet"])
+    </script>
+</body>
+</html>
