@@ -17,7 +17,10 @@ export default declare([Model], {
             required: true
         },
       FirstName: 'number',
-      LastName: 'string',
+      LastName: {
+          type: 'string',
+          required: true
+      },
       fullName: {
           dependsOn: ['FirstName', 'LastName'],
           getValue: function (FirstName, LastName) {
@@ -44,3 +47,4 @@ export default declare([Model], {
       }],
   }
 });
+console.log('fuse-portlet/models/users');

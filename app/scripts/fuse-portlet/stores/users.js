@@ -1,28 +1,18 @@
 import Memory from 'dstore/Memory';
 import modelUsers from '../models/users';
-let x = 'ff';
-let dummyStore = new Memory({
+
+let storeUser = new Memory({
     model: modelUsers
 });
-
-console.info('dummyStore', dummyStore);
-
-dummyStore.add({
-    FirstName: 'Dilipk',
-    LastName: 'Shukla'
+let su2 = modelUsers();
+su2.set({
+    FirstName: 123,
+    LastName: 'ok'
 });
-console.info('dummyStore', dummyStore);
-let fn = dummyStore.data.property('Dilipk');
-let dummyStore2 = new Memory();
+console.log('fullName');
+su2.get('fullName');
+console.log(su2);
+export default storeUser;
 
-dummyStore2.add({
-    FirstName: 'Dilip',
-    LastName: 'Shukla'
-});
-console.info('dummyStore2', dummyStore2);
-
-//console.info('modelUsers', modelUsers);
-dummyStore.forEach(user => {
-    //user.fullName.setValue();
-    console.log(user, user.FirstName, user.LastName, user.fullName);
-});
+console.info('storeUser from fuse-portlet/stores/users', storeUser);
+console.log('fuse-portlet/stores/users');

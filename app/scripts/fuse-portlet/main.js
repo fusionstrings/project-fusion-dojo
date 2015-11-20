@@ -1,4 +1,6 @@
-import models from './models/main';
-import usersStore from './stores/users';
+import add from './controllers/users';
+import config from 'dojo/_base/config';
 
-console.info('Portlet loaded');
+console.info('fuse-portlet/main', config.api);
+console.info('a', add());
+//add();

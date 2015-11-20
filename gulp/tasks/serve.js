@@ -5,7 +5,7 @@ import paths from '../paths';
 const reload = browserSync.reload;
 
 // Watch files for changes & reload
-gulp.task('serve', () => {
+gulp.task('serve', ['scripts'], () => {
   browserSync({
     notify: false,
     // Customize the BrowserSync console logging prefix
@@ -21,5 +21,5 @@ gulp.task('serve', () => {
       routes: paths.serveAltPaths
     }
   });
-  gulp.watch(`${paths.root}**/*.*`, [reload]);
+  gulp.watch(`${paths.root}**/*.*`, ['scripts', reload]);
 });
