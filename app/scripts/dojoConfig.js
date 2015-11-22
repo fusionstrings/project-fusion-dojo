@@ -1,7 +1,7 @@
 var dojoConfig = {
-            async: true,
-            baseUrl: '/',
-            packages: [                
+        async: true,
+        baseUrl: '/',
+        packages: [                
                 //{ name: "dojo17", location: "//ajax.googleapis.com/ajax/libs/dojo/1.7.0" },
                 { name: "dojo10", location: "bower_components/dojo" },
                 { name: "dijit", location: "bower_components/dijit" },
@@ -15,10 +15,15 @@ var dojoConfig = {
                 { name: "fuse", location: "amd/fuse", packageMap: {dojo:"dojo10"}},
                 { name: "fuse2", location: "amd/fuse2"}
                 //{ name: "react-dom", location: "bower_components/react", main: "react-dom"}
-                ],
-            map: {
-                fuse2: {
-                    dojo: "dojo10"
-                }
-            }
-        };
+        ],
+        map: {
+        fuse2: {
+                dojo: "dojo10"
+        }
+        },
+                
+        deps: [ 'yo-dojov2' ],
+        callback: function (yoDojov2) {
+                yoDojov2.init();
+        }
+    };

@@ -18,19 +18,25 @@
     <![endif]-->
 </head>
 <body>
-    <h1 id="greeting">Hello ok...</h1>
-    <h2 id="o">Dojo</h2>
-    <div id="example"></div>
-    <div id="tic"></div>
+    <div class="container">
+        <h1 id="greeting">Hello ok...</h1>
+        <h2 id="o">Dojo</h2>
+        <div id="example"></div>
+        <div id="tic"></div>
+        <div id="fuse-portlet">
+            <h1>Fuse Portlet</h1>
+        </div>
+    </div>
     <script>
         var dojoConfig = {
             async: true,
+            isDebug: true,
             baseUrl: '/',
             packages: [
                 { name: "dojo", location: "bower_components/dojo" },
                 { name: "dstore", location: "bower_components/dstore" },
                 { name: "dmodel", location: "bower_components/dmodel" },
-                { name: "fuse-portlet", location: "amd/fuse-portlet"}
+                { name: "fuse-portlet", location: "scripts/fuse-portlet"}
             ],
             api: '/rest'
         };
