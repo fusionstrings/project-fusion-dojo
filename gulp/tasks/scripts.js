@@ -6,7 +6,7 @@ const $ = gulpLoadPlugins();
 //import paths from '../paths';
 
 gulp.task('scripts', () => {
-    return gulp.src('app/scripts/**/*.js')
+    return gulp.src(['!app/scripts/dojo-config.js', 'app/scripts/**/*.js'])
     // .pipe(babel({
     //         presets: ['es2015', 'react'],			
     //         plugins: ["transform-es2015-modules-amd"]
@@ -17,7 +17,7 @@ gulp.task('scripts', () => {
         plugins: ["transform-es2015-modules-amd"]
     }))
     .pipe($.sourcemaps.write())
-    .pipe(gulp.dest('app/amd'))
+    .pipe(gulp.dest('.tmp/scripts'))
     //.pipe($.concat('main.min.js'))
     .pipe($.uglify({preserveComments: 'some'}))
     // Output files

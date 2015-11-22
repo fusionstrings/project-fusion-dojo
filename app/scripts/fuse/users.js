@@ -7,7 +7,3 @@ topic.subscribe("get/post", function(){
         console.log(response);
     });
 });
-export default function init(){
-    console.info('fuse module loaded');
-    topic.publish("get/post", 'get post bhai');
-}

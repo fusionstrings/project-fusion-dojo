@@ -27,25 +27,8 @@
             <h1>Fuse Portlet</h1>
         </div>
     </div>
-    <script>
-        var dojoConfig = {
-            async: true,
-            isDebug: true,
-            baseUrl: '/',
-            packages: [
-                { name: "dojo", location: "bower_components/dojo" },
-                { name: "dstore", location: "bower_components/dstore" },
-                { name: "dmodel", location: "bower_components/dmodel" },
-                { name: "fuse-portlet", location: "scripts/fuse-portlet"}
-            ],
-            api: '/rest'
-        };
-    </script>
+    <script src="scripts/dojo-config.js"></script>
     <!-- load Dojo -->
     <script src="bower_components/dojo/dojo.js"></script>
-            
-    <script>
-        require(["fuse-portlet"])
-    </script>
 </body>
 </html>
